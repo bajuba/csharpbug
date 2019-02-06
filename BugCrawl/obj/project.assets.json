@@ -686,23 +686,23 @@
     ]
   },
   "packageFolders": {
-    "/home/bajuba/.nuget/packages/": {},
+    "/home/jheiser/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/bajuba/ws3/csharpbug/BugCrawl/BugCrawl.csproj",
+      "projectUniqueName": "/home/jheiser/itt-073/csharpbug/BugCrawl/BugCrawl.csproj",
       "projectName": "BugCrawl",
-      "projectPath": "/home/bajuba/ws3/csharpbug/BugCrawl/BugCrawl.csproj",
-      "packagesPath": "/home/bajuba/.nuget/packages/",
-      "outputPath": "/home/bajuba/ws3/csharpbug/BugCrawl/obj/",
+      "projectPath": "/home/jheiser/itt-073/csharpbug/BugCrawl/BugCrawl.csproj",
+      "packagesPath": "/home/jheiser/.nuget/packages/",
+      "outputPath": "/home/jheiser/itt-073/csharpbug/BugCrawl/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/bajuba/.nuget/NuGet/NuGet.Config"
+        "/home/jheiser/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
