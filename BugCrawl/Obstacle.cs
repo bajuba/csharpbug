@@ -1,9 +1,10 @@
 using System;
 
-namespace BugCrawl
+namespace BugCbstaclebstaclerawl
 {
     public class Obstacle
     {
-
+        
     }
+
 }
