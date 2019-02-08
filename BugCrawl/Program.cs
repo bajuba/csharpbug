@@ -7,8 +7,9 @@ namespace BugCrawl
     {
         static void Main(string[] args)
         {
-            
-            
+        World myWorld = new World("bob");
+        Console.WriteLine(myWorld.draw());
+        Console.WriteLine(myWorld.sayName());
         var aTimer = new Timer();
         aTimer.Interval = 50;
 
@@ -21,7 +22,7 @@ namespace BugCrawl
         // Start the timer
         aTimer.Enabled = true;
 
-       
+
         }
         private static void render(Object source, System.Timers.ElapsedEventArgs e)
         {
