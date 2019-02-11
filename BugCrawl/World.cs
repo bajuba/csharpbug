@@ -15,7 +15,6 @@ namespace BugCrawl
             stage = new List<List<string>>();
             for(int i=0;i<10;i++)
             {
-                Console.Write(i);
                 this.stage.Add(new List<string>());
                for(int j=0;j<10;j++)
                {
@@ -33,6 +32,7 @@ namespace BugCrawl
                    toDraw+=stage[i][j];
                    //toDraw= toDraw + stage[i][j];
                }
+               toDraw += "\n";
             }
             return toDraw;
         }
