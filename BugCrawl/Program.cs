@@ -1,33 +1,45 @@
-﻿using System;
+using System;
 using System.Timers;
 
 namespace BugCrawl
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-        World myWorld = new World("bob");
-        Console.WriteLine(myWorld.draw());
-        Console.WriteLine(myWorld.sayName());
-        var aTimer = new Timer();
-        aTimer.Interval = 50;
-
-        // Hook up the Elapsed event for the timer. 
-        aTimer.Elapsed += render;
-
-        // Have the timer fire repeated events (true is the default)
-        aTimer.AutoReset = true;
-
-        // Start the timer
-        aTimer.Enabled = true;
+        //declare aTimer form system
+        private static System.Timers.Timer aTimer = new System.Timers.Timer();
+        private static void Main(string[] args)
+        {             
+            World myWorld = new World("bob");
 
 
+            //create function to pull the world into the render timer
+            Object createWorld()
+            {
+                return myWorld.draw();
+            }           
+
+            //create render function to process info from event handler below
+            void render(Object source, System.Timers.ElapsedEventArgs e)
+            {
+                //erase the world
+                //Console.Clear();
+                //recreate the world
+                Console.WriteLine(createWorld());
+            }
+
+                //timer interval is set to 1 second      
+                aTimer.Interval = 50;
+                //event handler sends timer info to render()
+                aTimer.Elapsed += new ElapsedEventHandler(render);
+                //autoreset timer after interval      
+                aTimer.AutoReset = true;
+                //timer is enabled
+                aTimer.Enabled = true;           
+            
+
+            //the world will regenerate until the combination is pressed
+            Console.WriteLine("Press 'q' then 'enter' to quit");            
+            while(Console.Read()!='q');           
         }
-        private static void render(Object source, System.Timers.ElapsedEventArgs e)
-        {
-            //Console.Clear();
-            Console.WriteLine("hello");
-        }
-    }
+    }    
 }
