@@ -10,6 +10,7 @@ namespace BugCrawl
     {
         public List<List<string>> stage = new List<List<string>>();
         public string name="";
+        public List<Creature> stuff = new List<Creature>();
 
         public World(string inputName){
             stage = new List<List<string>>();
@@ -25,6 +26,10 @@ namespace BugCrawl
         }
         public string draw(){
             string toDraw="";
+            foreach(Creature guy in this.stuff)
+            {
+                stage[guy.Xpos][guy.Ypos] = guy.body;
+            }
             for(int i=0;i<10;i++)
             {
                for(int j=0;j<10;j++)
@@ -34,6 +39,9 @@ namespace BugCrawl
                }
                toDraw += "\n";
             }
+
+            
+
             return toDraw;
         }
         public string sayName()

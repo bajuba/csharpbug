@@ -9,8 +9,11 @@ namespace BugCrawl
         static void Main(string[] args)
         {
         World myWorld = new World("bob");
-        Console.WriteLine(myWorld.draw());
-        Console.WriteLine(myWorld.sayName());
+        Creature bug = new Creature("logan");
+        myWorld.stuff.Add(bug);
+
+        //Console.WriteLine(myWorld.draw());
+        //Console.WriteLine(myWorld.sayName());
         aTimer = new System.Timers.Timer();
         aTimer.Interval = 50;
 
@@ -33,6 +36,7 @@ namespace BugCrawl
             // Console.WriteLine("hello");
         Console.WriteLine("Raised: {0}", e.SignalTime);
         Console.WriteLine(myWorld.draw());
+        
         }
     }
 }
