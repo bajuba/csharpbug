@@ -12,7 +12,7 @@ namespace BugCrawl
         Console.WriteLine(myWorld.draw());
         Console.WriteLine(myWorld.sayName());
         aTimer = new System.Timers.Timer();
-        aTimer.Interval = 5000;
+        aTimer.Interval = 50;
 
         // Hook up the Elapsed event for the timer. 
         // aTimer.Elapsed += render;
@@ -29,7 +29,7 @@ namespace BugCrawl
         }
         static void render(Object source, System.Timers.ElapsedEventArgs e, World myWorld)
         {
-            //Console.Clear();
+            Console.Clear();
             // Console.WriteLine("hello");
         Console.WriteLine("Raised: {0}", e.SignalTime);
         Console.WriteLine(myWorld.draw());
