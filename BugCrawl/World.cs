@@ -28,7 +28,11 @@ namespace BugCrawl
             string toDraw="";
             foreach(Creature guy in this.stuff)
             {
+
+                stage[guy.xPos][guy.yPos] = guy.dash;
                 stage[guy.Xpos][guy.Ypos] = guy.body;
+
+                
             }
             for(int i=0;i<10;i++)
             {
