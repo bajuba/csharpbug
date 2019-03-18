@@ -6,29 +6,29 @@ namespace BugCrawl
     class Program
     {
         private static Timer aTimer;
+
         static void Main(string[] args)
         {
-        World myWorld = new World("bob");
-        Creature bug = new Creature("logan");
-        myWorld.stuff.Add(bug);
+            World myWorld = new World("bob");
+            Creature bug = new Creature("logan");
+            myWorld.stuff.Add(bug);
 
-        //Console.WriteLine(myWorld.draw());
-        //Console.WriteLine(myWorld.sayName());
-        aTimer = new System.Timers.Timer();
-        aTimer.Interval = 1000;
+            //Console.WriteLine(myWorld.draw());
+            //Console.WriteLine(myWorld.sayName());
+            aTimer = new System.Timers.Timer();
+            aTimer.Interval = 1000;
 
-        // Hook up the Elapsed event for the timer. 
-        // aTimer.Elapsed += render;
-        aTimer.Elapsed += (sender, e) => render(sender, e, myWorld);
+            // Hook up the Elapsed event for the timer. 
+            // aTimer.Elapsed += render;
+            aTimer.Elapsed += (sender, e) => render(sender, e, myWorld);
 
-        // Have the timer fire repeated events (true is the default)
-        aTimer.AutoReset = true;
+            // Have the timer fire repeated events (true is the default)
+            aTimer.AutoReset = true;
 
-        // Start the timer
-        aTimer.Enabled = true;
-      Console.WriteLine("Press the Enter key to exit anytime... ");
-      Console.ReadLine();
-
+            // Start the timer
+            aTimer.Enabled = true;
+            Console.WriteLine("Press the Enter key to exit anytime... ");
+            Console.ReadLine();
         }
         static void render(Object source, System.Timers.ElapsedEventArgs e, World myWorld)
         {
