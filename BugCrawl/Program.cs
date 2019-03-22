@@ -41,6 +41,8 @@ namespace BugCrawl
              
             // Console.WriteLine("hello");
         Console.WriteLine("Raised: {0}", e.SignalTime);
+        Console.WriteLine("Creature X: {0}", myWorld.stuff[0].Xpos);
+        
         Console.WriteLine(myWorld.draw());
         
         }
