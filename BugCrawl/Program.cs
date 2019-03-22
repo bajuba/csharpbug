@@ -11,7 +11,9 @@ namespace BugCrawl
         {
             World myWorld = new World("bob");
             Creature bug = new Creature("logan");
+            Boring bug2 = new Boring("logan");
             myWorld.stuff.Add(bug);
+            myWorld.stuff.Add(bug2);
 
             //Console.WriteLine(myWorld.draw());
             //Console.WriteLine(myWorld.sayName());
@@ -33,10 +35,10 @@ namespace BugCrawl
         static void render(Object source, System.Timers.ElapsedEventArgs e, World myWorld)
         {
             Console.Clear();
-            foreach(Creature guy in myWorld.stuff)
+            foreach(var guy in myWorld.stuff)
             {
                 //guy.think();
-                guy.moveRandom();
+                guy.move();
             }
              
             // Console.WriteLine("hello");

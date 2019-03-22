@@ -55,12 +55,8 @@ namespace BugCrawl
         public string draw()
         {
             string toDraw = "";
-            foreach (Creature guy in this.stuff)
-            {
-                //x+y*width
-                //surfaceLevel[guy.xPos+guy.yPos*width] = guy.dash;
-                //clear out the surface level
-                for (int x = 0; x < width; x++)
+            
+            for (int x = 0; x < width; x++)
                 {
                     for (int y = 0; y < width; y++)
                     {
@@ -68,6 +64,13 @@ namespace BugCrawl
                         this.surfaceLevel[x + y * width] = ("");
                     }
                 }
+            
+            foreach (Creature guy in this.stuff)
+            {
+                //x+y*width
+                //surfaceLevel[guy.xPos+guy.yPos*width] = guy.dash;
+                //clear out the surface level
+                
                 //adds the creatures into the surface level
                 surfaceLevel[guy.Xpos + guy.Ypos * width] = guy.body;
             }

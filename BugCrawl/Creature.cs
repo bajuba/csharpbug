@@ -15,8 +15,15 @@ namespace BugCrawl
             this.dash = "-";
             this.Xpos = 0;
             this.Ypos = 0;
-            this.name = name;
-            
+
+            if (name == null)
+            {
+                this.name = "Logan";
+            }
+            else
+            {
+                this.name = name;
+            }
 
         }
 
@@ -29,15 +36,18 @@ namespace BugCrawl
         //moverandom
         public void moveRandom()
         {
-            Random rnd = new Random();
-            this.Xpos = rnd.Next(0, 10);
-            this.Ypos = rnd.Next(0, 10);
+            
             
 
             
 
         }
-
+        virtual public void move()
+        {
+            Random rnd = new Random();
+            this.Xpos = rnd.Next(0, 10);
+            this.Ypos = rnd.Next(0, 10);
+        }
 
     }
 }
