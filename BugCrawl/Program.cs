@@ -16,6 +16,10 @@ namespace BugCrawl
 
             Boring bug2 = new Boring("logan");
             myWorld.stuff.Add(bug2);
+
+            Hungry bug3 = new Hungry("race", myWorld);
+            myWorld.stuff.Add(bug3);
+
 //instantiate and add an instance of your creature subclass to the stuff list in myWorld
             //Console.WriteLine(myWorld.draw());
             //Console.WriteLine(myWorld.sayName());
