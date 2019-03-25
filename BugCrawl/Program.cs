@@ -10,11 +10,13 @@ namespace BugCrawl
         static void Main(string[] args)
         {
             World myWorld = new World("bob");
-            Creature bug = new Creature("logan");
-            Boring bug2 = new Boring("logan");
-            myWorld.stuff.Add(bug);
-            myWorld.stuff.Add(bug2);
 
+            Creature bug = new Creature("logan");
+            myWorld.stuff.Add(bug);
+
+            Boring bug2 = new Boring("logan");
+            myWorld.stuff.Add(bug2);
+//instantiate and add an instance of your creature subclass to the stuff list in myWorld
             //Console.WriteLine(myWorld.draw());
             //Console.WriteLine(myWorld.sayName());
             aTimer = new System.Timers.Timer();
