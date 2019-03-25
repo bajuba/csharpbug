@@ -9,6 +9,7 @@ namespace BugCrawl
     public class Boring : Creature
     {
         int direction = 1;
+        
         public Boring(string name):base(name)
         { 
             this.body = "D";    
