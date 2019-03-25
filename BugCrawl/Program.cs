@@ -12,10 +12,16 @@ namespace BugCrawl
             World myWorld = new World("bob");
 
             Creature bug = new Creature("logan");
+<<<<<<< Updated upstream
+=======
+            Boring bug2 = new Boring("logan");
+            Reptar bug7 = new Reptar("logan");
+>>>>>>> Stashed changes
             myWorld.stuff.Add(bug);
 
             Boring bug2 = new Boring("logan");
             myWorld.stuff.Add(bug2);
+            myWorld.stuff.Add(bug7);
 
             Hungry bug3 = new Hungry("race", myWorld);
             myWorld.stuff.Add(bug3);
