@@ -31,6 +31,9 @@ namespace BugCrawl
 
             Boring bug42 = new Boring("justin",0,3);
             myWorld.stuff.Add(bug42);
+
+            Box bugsy = new Box("cj");
+            myWorld.stuff.Add(bugsy);
             
             
             // Hungry bug3 = new Hungry("race", myWorld);
