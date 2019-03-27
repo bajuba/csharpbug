@@ -22,7 +22,7 @@ namespace BugCrawl
         {
             
             //detect nearest boring and move towards it
-            Boring target = myWorld.stuff.OfType<Boring>().First();
+            Boring target = myWorld.stuff.OfType<Boring>().FirstOrDefault();
             
             if(this.Xpos < target.Xpos)
                 this.Xpos += 1;
@@ -32,7 +32,13 @@ namespace BugCrawl
                 this.Ypos += 1;
             else if(this.Ypos > target.Ypos)
                 this.Ypos -= 1;
-            
+            if(this.Ypos == target.Ypos && this.Xpos == target.Xpos)
+            {
+                //eat the Boring
+                myWorld.stuff.Remove(target);
+            }
         }
+
+        
     }
 }
