@@ -12,24 +12,26 @@ namespace BugCrawl
             World myWorld = new World("bob");
 
             Creature bug = new Creature("logan");
-            Boring bug2 = new Boring("logan");
-
-            Knight knight = new Knight("race");
-
-            Reptar bug7 = new Reptar("logan");
-
             myWorld.stuff.Add(bug);
 
-            //Boring bug2 = new Boring("logan");
+            Boring bug2 = new Boring("logan",0,0);
             myWorld.stuff.Add(bug2);
 
+            Knight knight = new Knight("race");
             myWorld.stuff.Add(knight);
 
+            Reptar bug7 = new Reptar("logan");
             myWorld.stuff.Add(bug7);
+            
+            Boring bug47 = new Boring("logan2",3,0);
+            myWorld.stuff.Add(bug47);
 
-
-            //Hungry bug3 = new Hungry("race", myWorld);
-            //myWorld.stuff.Add(bug3);
+            Boring bug42 = new Boring("justin",0,3);
+            myWorld.stuff.Add(bug42);
+            //Boring bug2 = new Boring("logan");
+            
+            // Hungry bug3 = new Hungry("race", myWorld);
+            // myWorld.stuff.Add(bug3);
 
 
 //instantiate and add an instance of your creature subclass to the stuff list in myWorld

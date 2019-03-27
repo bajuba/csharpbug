@@ -9,9 +9,11 @@ namespace BugCrawl
     public class Boring : Creature
     {
         int direction = 1;
-        
-        public Boring(string name):base(name)
+
+        public Boring(string name,int x,int y):base(name)
         { 
+            this.Xpos = x;
+            this.Ypos = y;
             this.body = "D";    
         }
 
