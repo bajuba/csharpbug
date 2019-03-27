@@ -12,8 +12,10 @@ namespace BugCrawl
             World myWorld = new World("bob");
             Creature bug = new Creature("logan");
             Boring bug2 = new Boring("logan");
+            Knight knight = new Knight("race");
             myWorld.stuff.Add(bug);
             myWorld.stuff.Add(bug2);
+            myWorld.stuff.Add(knight);
 
             //Console.WriteLine(myWorld.draw());
             //Console.WriteLine(myWorld.sayName());
