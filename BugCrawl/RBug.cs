@@ -14,7 +14,7 @@ namespace BugCrawl
         
         public RBug(string name):base(name)
         { 
-            this.body = "R";
+            this.body = "r";
             
         }
 
