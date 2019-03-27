@@ -21,9 +21,9 @@ namespace BugCrawl
         {
             
             
-            if(this.Xpos == 9)
+            if(this.Xpos == 9 || this.Ypos == 9)
                 direction = -1;
-            if(this.Xpos == 0)
+            if(this.Xpos == 0 || this.Ypos == 0) 
                 direction = 1;
 
             this.Xpos += direction;

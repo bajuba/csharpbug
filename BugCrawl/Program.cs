@@ -61,12 +61,15 @@ namespace BugCrawl
             foreach(var guy in myWorld.stuff)
             {
                 //guy.think();
+                //Console.WriteLine("Creature {3}: {0},{2}", guy.Xpos, guy.Ypos, guy.name);
                 guy.move();
             }
              
             // Console.WriteLine("hello");
         Console.WriteLine("Raised: {0}", e.SignalTime);
-        Console.WriteLine("Creature X: {0}", myWorld.stuff[0].Xpos);
+
+
+        
         
         Console.WriteLine(myWorld.draw());
         
