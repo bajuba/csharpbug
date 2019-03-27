@@ -36,8 +36,8 @@ namespace BugCrawl
             myWorld.stuff.Add(bugsy);
             
             
-            // Hungry bug3 = new Hungry("race", myWorld);
-            // myWorld.stuff.Add(bug3);
+            Hungry bug99 = new Hungry("race", myWorld);
+            myWorld.stuff.Add(bug99);
 
 
 //instantiate and add an instance of your creature subclass to the stuff list in myWorld
